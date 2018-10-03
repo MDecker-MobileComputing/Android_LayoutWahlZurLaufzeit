@@ -25,25 +25,40 @@ public class ActivityZwei extends Activity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        char layoutKennung = intent.getCharExtra( MainActivity.EXTRA_KEY_LAYOUT, 'x' );
 
-        switch (layoutKennung) {
-           case 'a':
-               setContentView(R.layout.layout_a);
-               break;
+        if ( intent.hasExtra(MainActivity.EXTRA_KEY_LAYOUT) == false ) {
 
-            case 'b':
-                setContentView(R.layout.layout_b);
-                break;
+            Toast.makeText(
+                    this,
+                    "Internet Fehler: Keine Layout-Kennung mitgegeben.",
+                    Toast.LENGTH_LONG).show();
 
-            default:
-                Toast.makeText(
-                        this,
-                        "Internet Fehler: Ungültiges Layout angefordert.",
-                        Toast.LENGTH_LONG).show();
-                finish();
+            finish();
+
+        } else {
+
+            char layoutKennung = intent.getCharExtra(MainActivity.EXTRA_KEY_LAYOUT, 'x');
+            // "x" ist Default-Key falls kein Char mit dem angegebenen Schlüssel gefunden wurde
+
+            switch (layoutKennung) {
+                case 'a':
+                    setContentView(R.layout.layout_a);
+                    break;
+
+                case 'b':
+                    setContentView(R.layout.layout_b);
+                    break;
+
+                default:
+                    Toast.makeText(
+                            this,
+                            "Internet Fehler: Ungültiges Layout angefordert.",
+                            Toast.LENGTH_LONG).show();
+                    finish();
+            }
+
         }
-    }
 
+    } // Ende Methode "onCreate()"
 
 }

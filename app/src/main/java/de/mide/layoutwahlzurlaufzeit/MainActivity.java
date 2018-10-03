@@ -18,9 +18,12 @@ import android.widget.Toast;
 public class MainActivity extends Activity
                           implements View.OnClickListener {
 
+    /**
+     * Key für Extra in Intent-Objekt vom Typ CHAR, für Ablage
+     * der Kennung der Layout-Datei.
+     */
+    public static final String EXTRA_KEY_LAYOUT = "EXTRA_KEY_LAYOUT_KENNUNG";
 
-    /** Key für Extra in Intent-Objekt vom Typ CHAR. */
-    public static final String EXTRA_KEY_LAYOUT = "EXTRA_KEY_LAYOUT";
 
     /** Button zum Laden von <i>layout_a</i>. */
     protected Button _buttonA = null;
@@ -73,6 +76,7 @@ public class MainActivity extends Activity
                     Toast.LENGTH_LONG).show();
             return;
         }
+
 
         startActivity(intent);
     }

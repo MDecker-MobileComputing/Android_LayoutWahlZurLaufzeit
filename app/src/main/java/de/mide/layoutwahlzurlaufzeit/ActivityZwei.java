@@ -22,6 +22,7 @@ public class ActivityZwei extends Activity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();

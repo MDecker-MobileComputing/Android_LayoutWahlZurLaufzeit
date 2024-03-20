@@ -14,5 +14,5 @@
         android:text="Layout B"
         android:textSize="35sp"
         android:textStyle="bold"/>
-    
+
 </RelativeLayout>

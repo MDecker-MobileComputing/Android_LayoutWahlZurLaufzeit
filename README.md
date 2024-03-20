@@ -16,9 +16,9 @@ Identifiers (names for classes, variables and methods), UI text and (JavaDoc) co
 
 <br>
 
-![Screenshot 1](screenshot_1.png)  
+![Screenshot 1](screenshot_1.png)
 
-![Screenshot 2](screenshot_2.png)  ![Screenshot 3](screenshot_3.png)
+![Screenshot 2](screenshot_2.png) &nbsp ![Screenshot 3](screenshot_3.png)
 
 <br>
 

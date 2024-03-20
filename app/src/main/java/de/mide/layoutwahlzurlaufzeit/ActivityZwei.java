@@ -42,6 +42,7 @@ public class ActivityZwei extends Activity {
             // "x" ist Default-Key falls kein Char mit dem angegebenen Schlüssel gefunden wurde
 
             switch (layoutKennung) {
+
                 case 'a':
                     setContentView(R.layout.layout_a);
                     break;
